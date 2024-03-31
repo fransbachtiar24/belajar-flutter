@@ -10,37 +10,16 @@ class iniHalamanAwal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Frans Developer",
-            style: const TextStyle(color: Colors.black),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.cyan,
+      appBar: AppBar(
+        title: Text(
+          "Frans Developer",
+          style: const TextStyle(color: Colors.black),
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Container(
-              color: Colors.lime,
-              padding: EdgeInsets.all(30.0),
-              margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-              child: Text("ini frans 1"),
-            ),
-            Container(
-              color: Colors.lime,
-              padding: EdgeInsets.all(30.0),
-              child: Text("ini frans 2"),
-              margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-            ),
-            Container(
-              color: Colors.lime,
-              padding: EdgeInsets.all(30.0),
-              child: Text("ini frans 3"),
-              margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-            )
-          ],
-        ));
+        centerTitle: true,
+        backgroundColor: Colors.cyan,
+      ),
+      body: IniBelajarColumns(),
+    );
   }
 }
 
@@ -116,5 +95,63 @@ class belajarLayouts extends StatelessWidget {
       color: Color.fromARGB(255, 33, 216, 42),
       child: Text("Ini Content"),
     );
+  }
+}
+
+class IniBelajarRow extends StatelessWidget {
+  const IniBelajarRow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        Container(
+          color: Colors.lime,
+          padding: EdgeInsets.all(30.0),
+          margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+          child: Text("ini frans 1"),
+        ),
+        Container(
+          color: Colors.lime,
+          padding: EdgeInsets.all(30.0),
+          child: Text("ini frans 2"),
+          margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+        ),
+        Container(
+          color: Colors.lime,
+          padding: EdgeInsets.all(30.0),
+          child: Text("ini frans 3"),
+          margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+        )
+      ],
+    );
+  }
+}
+
+class IniBelajarColumns extends StatelessWidget {
+  const IniBelajarColumns({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            color: Colors.lime,
+            padding: EdgeInsets.all(30.0),
+            child: Text("ini frans 1"),
+          ),
+          Container(
+            color: Colors.lime,
+            padding: EdgeInsets.all(30.0),
+            child: Text("ini frans 2"),
+          ),
+          Container(
+            color: Colors.lime,
+            padding: EdgeInsets.all(30.0),
+            child: Text("ini frans 3"),
+          )
+        ]);
   }
 }
